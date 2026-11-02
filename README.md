@@ -9,29 +9,15 @@ App para manejar el stock, los proveedores, las compras, las ventas, la caja y l
 
 ---
 
-## Publicar la app (una sola vez)
+## Dirección de la app
 
-Para abrirla desde cualquier dispositivo, la app tiene que estar en internet. Se publica gratis en **GitHub Pages**. Una vez publicada, cada dispositivo la abre una vez con internet, la instala y después funciona sin conexión. Los datos **no** se suben a internet: siguen guardados en cada dispositivo.
+**https://liracasadecuentos.github.io/lira-casa-de-cuentos/**
 
-### Paso 1: crear la cuenta de GitHub
-1. Entrá a **github.com** y tocá **Sign up**.
-2. Poné un mail, una contraseña y un nombre de usuario, por ejemplo `liracasadecuentos`. **El nombre de usuario va a ser parte de la dirección de la app.**
-3. Confirmá el mail.
+Está publicada gratis en GitHub Pages, en la cuenta **LiraCasadecuentos**. Cada dispositivo la abre una vez con internet, la instala (ver "Cómo abrirla e instalarla", más abajo) y después funciona sin conexión.
 
-### Paso 2: subir la app
-**Opción A (recomendada):** pasale el nombre de usuario a quien armó la app, o a Claude, y te la publica. La app queda en `https://NOMBRE-DE-USUARIO.github.io/lira-casa-de-cuentos/`. Cada vez que haya cambios, se vuelve a publicar sola.
+Lo que está en internet es **solo la app**. Los datos (productos, ventas, caja) **no** se suben: quedan guardados en cada dispositivo. Por eso el respaldo es tan importante.
 
-**Opción B (a mano, sin programas):**
-1. En esta compu, abrí la carpeta `dist` del proyecto. Ahí está la app lista. Si no existe, la arma `npm run build`.
-2. En GitHub, tocá **+ → New repository**. Nombre: `lira-casa-de-cuentos`. Marcá **Public** y tocá **Create repository**.
-3. Tocá **uploading an existing file** y arrastrá **todo el contenido** de la carpeta `dist` (los archivos y la carpeta `assets`, no la carpeta `dist` en sí). Abajo, tocá **Commit changes**.
-4. Andá a **Settings → Pages**. En "Branch" elegí **main** y la carpeta **/ (root)**. Tocá **Save**.
-5. Esperá 1 o 2 minutos. Arriba de esa misma página aparece la dirección de la app.
-
-Con la Opción B, cada actualización se sube de nuevo de la misma forma.
-
-### Paso 3: instalarla en cada dispositivo
-Ver "Cómo abrirla e instalarla", más abajo.
+Para publicar una versión nueva, ver "Publicar en GitHub Pages" al final.
 
 ---
 
@@ -303,7 +289,13 @@ src/
   - **Sincronización en la nube**: todos los registros tienen `id`, `updatedAt`, `deviceId` y `deleted`. Alcanzaría con mandar y recibir los cambios usando la misma unión de `logic/merge.js`.
 
 ### Publicar en GitHub Pages
-El archivo `.github/workflows/publicar.yml` publica la app sola cada vez que se suben cambios a la rama `main`:
-1. Crear el repositorio en GitHub y subir el código.
-2. En el repositorio: **Settings → Pages → Source: GitHub Actions**.
-3. A los pocos minutos, la app queda en `https://USUARIO.github.io/NOMBRE-DEL-REPOSITORIO/`.
+La app está en `https://liracasadecuentos.github.io/lira-casa-de-cuentos/`. El código está en `https://github.com/LiraCasadecuentos/lira-casa-de-cuentos`.
+
+Para publicar una versión nueva después de hacer cambios:
+```bash
+git add -A
+git commit -m "Qué cambió"
+git push
+npm run publicar
+```
+`npm run publicar` corre las pruebas, arma la app (carpeta `dist`) y la sube a la rama `gh-pages`, que es la que muestra GitHub Pages (**Settings → Pages → Branch: gh-pages**). Las apps instaladas se actualizan solas la próxima vez que se abren con internet.
