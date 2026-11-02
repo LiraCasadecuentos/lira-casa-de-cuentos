@@ -1,0 +1,46 @@
+/*
+  TEMA DE LA APP — colores y tipografías en un solo lugar.
+  Cuando esté lista la identidad visual, alcanza con cambiar estos valores.
+  (El nombre y el logo se cambian en src/theme/brand.js)
+*/
+:root {
+  /* Fondos */
+  --color-fondo: #fbf5ea; /* crema */
+  --color-superficie: #fffdf8; /* tarjetas */
+  --color-superficie-2: #f4e9d8; /* crema más oscuro */
+
+  /* Chocolate (color principal) */
+  --color-principal: #5b3a29;
+  --color-principal-oscuro: #3e2519;
+  --color-principal-suave: #ead9c6;
+  --color-sobre-principal: #fffaf2; /* texto encima del chocolate */
+
+  /* Acento suave (glaseado de frutilla) */
+  --color-acento: #d98a8a;
+  --color-acento-suave: #f8e1df;
+  --color-acento-texto: #8a3b3b;
+
+  /* Textos y bordes */
+  --color-texto: #3e2519;
+  --color-texto-suave: #7a5c4a;
+  --color-borde: #e3d2bc;
+
+  /* Estados */
+  --color-ok: #3f7d4e;
+  --color-ok-suave: #e1efe2;
+  --color-aviso: #8a5a00;
+  --color-aviso-suave: #fdf0d2;
+  --color-error: #a33a2c;
+  --color-error-suave: #fbe3df;
+
+  /* Tipografías */
+  --fuente-titulos: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --fuente-texto: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --tamano-base: 18px;
+
+  /* Formas */
+  --radio: 14px;
+  --radio-chico: 10px;
+  --sombra: 0 1px 2px rgba(62, 37, 25, 0.08), 0 4px 14px rgba(62, 37, 25, 0.06);
+  --alto-boton: 52px;
+}

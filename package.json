@@ -1,0 +1,31 @@
+{
+  "name": "lira-casa-de-cuentos",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Stock y ventas de Lira. Casa de cuentos",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "test": "vitest run",
+    "iconos": "node scripts/crear-iconos.mjs"
+  },
+  "dependencies": {
+    "@fontsource/fraunces": "^5.1.0",
+    "@fontsource/nunito": "^5.1.0",
+    "dexie": "^4.0.10",
+    "dexie-react-hooks": "^1.1.7",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11",
+    "vite-plugin-pwa": "^0.21.1",
+    "vitest": "^2.1.8"
+  }
+}
